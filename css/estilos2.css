@@ -1,0 +1,70 @@
+.contenedor{
+    background-color: blue;
+    padding: 10px;
+    font-size: 25px;
+    text-align: center;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr 7fr 1fr;
+    grid-template-areas: "cabecera  cabecera    cabecera"
+                         "menu      menu        menu"
+                         "contenido contenido   publi"
+                         "pie   pie pie";
+}
+.contenedor>div{
+    background-color: chartreuse;
+}
+.contenedor .cabecera{
+    background-color: yellow;
+    grid-column: cabecera;
+}
+.contenedor .menu{
+    background-color: orange;
+    grid-column: menu;
+}
+.contenedor .publicidad{
+    background-color: bisque;
+    grid-column: publi;
+}
+.contenedor .contenido{
+    background-color: azure;
+    grid-column: contenido;
+}
+.contenedor .contenido .cajas{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(16,1fr);
+    grid-gap: 10px;
+    padding: 20px;
+}
+.contenedor .contenido .cajas .texto1{
+    grid-column: 1/2;
+    grid-row: 1/17;
+    background-color: orange;
+}
+.contenedor .contenido .cajas .texto2{
+    grid-column: 2/3;
+    background-color: orange;
+    grid-row: 1/17;
+}
+.contenedor .publicidad .cajapubli{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(16/1fr);
+    grid-gap: 10px;
+    padding: 20px;
+}
+.contenedor .publicidad .cajapubli .textopubli1{
+    grid-row: 1/9;
+    grid-column: 1/2;
+    background-color: orange;
+}
+.contenedor .publicidad .cajapubli .textopubli2{
+    grid-row: 9/17;
+    background-color: orange;
+}
+.contenedor .pie{
+    background-color: coral;
+    grid-column: pie;
+}
